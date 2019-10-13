@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch",
+      "type": "php",
+      "request": "launch",
+      "program": "${file}",
+      "stopOnEntry": true,
+      "cwd": "${fileDirname}",
+      "port": 9000,
+      "runtimeExecutable": "D:\\workspace\\php\\php installations\\php.exe"
+    }
+  ]
+}
