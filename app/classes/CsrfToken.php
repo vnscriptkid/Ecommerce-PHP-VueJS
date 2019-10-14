@@ -3,10 +3,10 @@
 namespace App\Classes;
 
 class CsrfToken {
-  public static function _getOrCreate() {
+  public static function getOrCreate() {
     if (!Session::has('csrfToken')) {
       $csrfToken = \base64_encode(\openssl_random_pseudo_bytes(32));
-      Session::add('csrfToken');
+      Session::add('csrfToken', $csrfToken);
     }
     return Session::get('csrfToken');
   }
