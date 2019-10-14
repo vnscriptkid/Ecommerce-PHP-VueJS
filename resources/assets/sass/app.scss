@@ -3,14 +3,14 @@
 @mixin fontFace($family, $src, $style: normal, $weight: normal) {
   @font-face {
     font-family: $family;
-    src: url("#{$src}.eot"); // IE9 compat
-    src: url("#{$src}.eot?#iefix") format("embedded-opentype"),
-      // IE8 and below
-        url("#{$src}.woff") format("woff"),
-      // standards
-        url("#{$src}.ttf") format("truetype"),
-      // Safari, Android, iOS
-        url("#{$src}.svg##{$family}") format("svg"); // legacy iOS
+    // src: url("#{$src}.eot"); // IE9 compat
+    // src: url("#{$src}.eot?#iefix") format("embedded-opentype"),
+    // IE8 and below
+    // url("#{$src}.woff") format("woff"),
+    // standards
+    src: url("#{$src}.ttf") format("truetype");
+    // Safari, Android, iOS
+    // url("#{$src}.svg##{$family}") format("svg"); // legacy iOS
 
     font-style: $style;
     font-weight: $weight;
@@ -19,6 +19,10 @@
 
 @import "../../../node_modules/foundation-sites/assets/foundation.scss";
 @import "../../../node_modules/motion-ui/src/motion-ui.scss";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../../../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+// @import "../../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+// @import "../../../node_modules/@fortawesome/fontawesome-free/css/svg-with-js.css";
 
 @include fontFace("Raleway", "../fonts/Raleway-Light");
 @include fontFace("Raleway", "../fonts/Raleway-Regular");
@@ -30,3 +34,6 @@ body {
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+// import custom styles
+@import "./admin/_nav.scss";

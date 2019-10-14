@@ -1,0 +1,29 @@
+.adminNav {
+  background-color: #ddd;
+}
+
+.adminNavMenu {
+  & li {
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: #aaa;
+    }
+  }
+}
+
+.welcomeAdmin {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+.adminPhoto {
+  text-align: center;
+
+  img {
+    border-radius: 50%;
+    height: 200px;
+    margin-bottom: 0.5rem;
+  }
+}
