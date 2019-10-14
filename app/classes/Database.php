@@ -21,5 +21,6 @@ class Database {
 
     // Make this Capsule instance available globally via static methods... (optional)
     $capsule->setAsGlobal();
+    $capsule->bootEloquent();
   }
 }
