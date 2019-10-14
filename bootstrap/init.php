@@ -5,6 +5,9 @@
   // load env vars
   require_once __DIR__.'/../app/config/_env.php';
 
+  // init db
+  new App\Classes\Database();
+
   // handle routes
   require_once __DIR__.'/../app/routing/routes.php';
 
